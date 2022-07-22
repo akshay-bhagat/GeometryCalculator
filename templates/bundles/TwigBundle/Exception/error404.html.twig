@@ -1,0 +1,44 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if (app.request.uri != "http://127.0.0.1:8000/") %}
+    <h1>Page not found</h1>
+
+    <p>
+        The requested page couldn't be located. Checkout for any URL
+        misspelling or <a href="/">return to the homepage</a>.
+    </p>
+{% endif%}
+
+    <p> Copyright © <a href="https://akshaybhagat.in/">Akshay Bhagat</a> </p>
+
+    <p> <span class="fa fa-code"> </span>Made with <b style="color: #e74c3c" class="fa fa-heart"> ❤️ </b> by Akshay Bhagat</p>
+   
+   <br>
+   <hr>
+    <table class="route_list">
+    <thead>
+        <td>Function</td>
+        <td>Route</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Circle</td>
+            <td><a href="http://127.0.0.1:8000/circle/2">/circle/2</a></td>
+        </tr>
+        <tr>
+            <td>Triangle</td>
+            <td><a href="http://127.0.0.1:8000/triangle/3/4/5">/triangle/3/4/5</a></td>
+        </tr>
+        <tr>
+            <td>Sum of Area</td>
+            <td><a href="http://127.0.0.1:8000/sum-of-areas">/sum-of-areas</a></td>
+        </tr>
+        <tr>
+            <td>Sum of Diameter</td>
+            <td><a href="http://127.0.0.1:8000/sum-of-diameters">/sum-of-diameters</a></td>
+        </tr>
+    </tbody>
+    </table>
+{% endblock %}
